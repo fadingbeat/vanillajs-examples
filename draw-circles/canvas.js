@@ -9,13 +9,14 @@ const canvas = document.getElementById("tutorial");
 
 let stopInterval;
 let callCount = 0;
+let windowWidth = document.getElementById("tutorial").width;
 
 const draw = () => {
   if (canvas.getContext) {
     const ctx = canvas.getContext("2d");
     ctx.beginPath();
     ctx.arc(30, 30, 25, 0, Math.PI * 2, true);
-    ctx.translate(55, 0);
+    ctx.translate(155, 0);
     ctx.fillStyle = "rgba(255, 0, 0, 0.8)";
     ctx.fill();
     ctx.strokeStyle = "rgba(255, 0, 0, 0.8)";
@@ -34,3 +35,5 @@ const startDrawing = () => {
 const stopDrawing = () => {
   clearInterval(stopInterval);
 };
+
+const changeDirection = () => {};
