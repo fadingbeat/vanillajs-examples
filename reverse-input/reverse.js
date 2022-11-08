@@ -1,3 +1,5 @@
+// Reverse string or a number
+
 let stringReverse;
 let inputArr;
 let inputArrReversed;
@@ -23,3 +25,10 @@ const finalResult = () => {
 
 reverse("What is this madness?");
 // reverse(5444);
+
+// Reverse an array
+
+const ages = [21, 27, 33, 36];
+const newAges = [...ages];
+console.log(ages);
+console.log(newAges.reverse());
