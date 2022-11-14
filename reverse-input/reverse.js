@@ -1,4 +1,4 @@
-// Reverse string or a number
+// Reverse string, a number or an array
 
 let stringReverse;
 let inputArr;
@@ -14,6 +14,12 @@ const reverse = (input) => {
     inputArr = numToStringArr.split("");
     finalResult();
   }
+  if (Array.isArray(input)) {
+    const cloneInput = [...input];
+    const reversedArr = cloneInput.reverse();
+    console.log(reversedArr);
+    return reversedArr;
+  }
   return stringReverse;
 };
 
@@ -24,14 +30,6 @@ const finalResult = () => {
 };
 
 reverse("What is this madness?");
-// reverse(5444);
-
-// REVERSE AN ARRAY
-
-const ages = [21, 27, 33, 36];
-const newAges = [...ages];
-console.log(ages);
-console.log(newAges);
-
-// using reverse method
-console.log(newAges.reverse());
+reverse(5444);
+const rarr = ["5", "4", "3", "2", "1"];
+reverse(rarr);
